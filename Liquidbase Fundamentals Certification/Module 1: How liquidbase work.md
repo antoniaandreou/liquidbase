@@ -18,9 +18,9 @@ Two most common ways lqbase used:
 - Uses SQL statements in changesets to make changes
 - Lqbase then sues these SQL changesets to create the *change types*
 - Formatted SQL changelog use comments to provide lqbase metadata. Needs to begin with the following comment 
-    - --liquidbase formatted sql
+    - -- liquidbase formatted sql
 - Changesets need to begin with the following comment
-    - --changeset author:id
+    - -- changeset author:id
     Could add multiple changesets in a changelog but each need to begin with a new line as dictated above
 - These are then followed by SQL statements separated by semi-colons
 
