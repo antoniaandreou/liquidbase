@@ -48,7 +48,28 @@
   - 1 or more changesets
   - store and version in preferred source control tool
   - can include other changelogs too, allowing multiple teams to work on their own changelogs independently
+  - used by liquidbase to audit the db and execute any changes not yet applied
 
 #### Liquidbase Terminology 
-- Project - 
+- Project - a collaborative enterprise that is carefully planned and designed to achieve a particular aim
+- Database - an organised collection of data
+- Command Line Interface (CLI) - a text-based interface that allows you to view and modify your files
+  - CLI allows for liquiqbase commands to be entered in a text-based format
+- Changelog - acts as a ledger of changes and contains a list of changesets to be executed in a database
+- Changeset - a unit of change that occurs to a database and indicated by 
+  - *changeset tag* in XML, JSON, YAML
+  - *changeset author:id* in SQL
+  The changeset tag is identified by 
+    - id tag
+    - author tag
+    - changelog file classpath name
+    & it contains that unit of change
+
+#### Liquidbase Commands
+- **update** - applies to all unrun changes
+- **rollback** - reverts changes you have made to your database
+- **snapshot** - use to compare changes in your db or keep a record of the current db state
+- **diff** - allows comparison of 2 dbs of same or different types
+- **diff-changelog** - used to create a deployable changelog to synchronize multiple databases
+- **history** - a helper command that lists out all deploymentIDs and their associated changesets
 
